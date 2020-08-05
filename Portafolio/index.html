@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nahuel Fernandez Beschtedt</title>
+        <link rel="icon" type="image/jpeg" href="images/Logo.jpeg">
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <i class="icon-menu burger-button" id="burger-menu"></i>
+        <header class="header">
+            <div class="container">
+                <figure class="logo">
+                    <img src="images/1024px-Naruto_logo.svg.png" alt="logo" height="70" width="180">
+                </figure>
+                <nav class="menu">
+                    <ol>
+                        <li>
+                            <a class="link" href="#portfolio">Portafolio</a>
+                        </li>
+                        <li>
+                            <a class="link" href="#experience">Experiencia</a></li>
+                        <li>
+                            <a class="link" href="#contacto">Trabajemos juntos</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <h1>
+                    Hola! Soy <strong> Nahuel Fernandez Beschtedt <br> </strong> Desarrollador <strong>JavaScript</strong> con <br> pasión por el <strong>aprendizaje</strong>
+                </h1>
+                    <img class="hero-image" src="images/Logo.jpeg" width="480" height="300" alt="Hero">
+            </div>
+        </section>
+        <section id="portafolio" class="portfolio">
+            <div class="container">
+            <h2>Portafolio (Proyectos Destacados)</h2>
+            <article class="project">
+                <div class="project-details">
+                    <h3 class="project-title">Pagina de presentacion</h3>
+                    <h6 class="project-course">HTML CSS</h6>
+                    <p class="project-date">
+                    <small><strong>Fecha:</strong> 13/7/20(A completar)</small> 
+                    </p>
+                    <p class="project-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                    velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, 
+                    sunt in culpa qui officia deserunt mollit anim id est laboru
+                    </p>            
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="images/JoJos-Bizarre-Adventure-Stone-Ocean-Jolyne-Cujoh-Stone-Free.jpg" alt="Project image" width="100%">
+                </figure>
+            </article>
+            </div>
+        </section>
+        <div class="container">
+            <h2 class="website-title">Mas sobre mi Experiencia</h2>
+            <section id="experience" class="experience-list">
+                <article class="website">
+                    <figure class="website-imageContainer"></figure>
+                        <img class="website-image" alt="Logo de Manga Academia" src="images/Pain.webp" height="300" width="500px">
+                    </figure>
+                    <div class="website-detail">
+                    <h3>Manga Academia</h3>
+                    <div class="website-description">
+                        <p>
+                            Pagina dedicada a reseñar comics y mangas que he leído
+                        </p>
+                    </div>
+                        <a class="instagram" href="https://www.instagram.com/mangaacademia/" target="_blank">Ver instagram</a>
+                    </div>
+                </article>
+                <div class="flexible-video">
+                    <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/ttE2FAwYU6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+            <section id="contacto" class="contact">
+                <div class="container">
+                <form action="/suscripcion/" class="form-email">
+                <h3 class="contact-title">¿Creamos algo juntos?</h3>
+                <input type="text" placeholder="Dejame tu Email" id="email">
+                <button>Enviar</button>
+                </form>
+                <div class="social"> 
+                    <a href="https://twitter.com/LNahuelFB_JS">
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nahuel-fernandez-beschtedt/">
+                        <i class="icon-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/lnahuelfb">
+                        <i class="icon-github"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+        <div class="container">
+                <div>
+                    <p>Curso de desarrollo web online 2020</p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            const ipad = window.matchMedia('screen and (max-width: 767px)');
+            const menu = document.querySelector('.menu');
+            const burgerButton = document.querySelector('#burger-menu');
+            
+            ipad.addListener(validation);
+
+            function validation(event) {
+                if (event.matches){
+                    burgerButton.addEventListener('click', hideShow)
+                } else {
+                    burgerButton.removeEventListener('click', hideShow)
+                }
+            }
+
+            validation(ipad);
+
+            function hideShow () {
+                if (menu.classList.contains('is-active')){
+                    menu.classList.remove('is-active')
+                } else {
+                    menu.classList.add('is-active');
+                }
+            }
+        </script>
+    </body>
+</html>
